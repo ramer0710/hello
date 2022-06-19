@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksrawad-7f2f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksrawad-7f2f"
+  template:
+    metadata:
+      labels:
+        app: "aksrawad-7f2f"
+    spec:
+      containers:
+        - name: "aksrawad-7f2f"
+          image: "rgcrawad.azurecr.io/aksrawad"
+          ports:
+          - containerPort: 80
